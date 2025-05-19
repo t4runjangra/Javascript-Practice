@@ -1,2 +1,2 @@
-console.log("namaste ");
+console.log("hi");
 
