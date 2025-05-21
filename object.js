@@ -2,6 +2,8 @@
 // there are two types of objects initialization constructor and literals
 // {} this is an object (empty object) the curly braces are the symbol of objects 
 // lets create a object with the name of user
+// ***************************Object Literals ******************************************
+
 
 // let user = {
 //     name : "tarun",
@@ -22,12 +24,12 @@
 
 // there is a method where you can access the object only  with [] 
 
-let user = {
-    name : "tarun",
+// let user = {
+//     name : "tarun",
 
-    // "full name":"Tarun jangra",
-    age : 19,
-} 
+//     // "full name":"Tarun jangra",
+//     age : 19,
+// } 
 
 // now i can't access the full name with "." method 
 
@@ -46,12 +48,12 @@ let user = {
 
 // we can add functions too 
 
-user.greet = function(){
-    console.log(`hi guys,i'm ${this.name} and i'm ${this.age} old, Nice to Meet you!` );
-}
-user.greet()// to use or call a function use this () after your defined name
+// user.greet = function(){
+//     console.log(`hi guys,i'm ${this.name} and i'm ${this.age} old, Nice to Meet you!` );
+// }
+// user.greet()// to use or call a function use this () after your defined name
 
 
-console.log(user.greet());// will get undefined here because greet() itself doesn't return anything, so it implicitly returns undefined.
+// console.log(user.greet());// will get undefined here because greet() itself doesn't return anything, so it implicitly returns undefined.
 
 
