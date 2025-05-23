@@ -133,7 +133,7 @@ const result = (() => ({ name: "Tarun" }))();
 //   console.log("tarun"); }
 // )()
 
-
+// IIFE 
 (function(){
   console.log("tarun"); }
 )();
