@@ -119,5 +119,21 @@ function calculateSquareRoot(num) {
 let addtwoNumber = (num1, num2) => {
   return num1+num2
 }
+// console.log(addtwoNumber(3,5));
 
-console.log(addtwoNumber(3,5));
+//IIFE (Immediately Invoked Function Expression)
+const result = (() => ({ name: "Tarun" }))();
+// console.log(result.name); 
+
+// let print = (( ) => ({name: "Tarun"}))()
+// console.log(print.name);
+
+
+// (()=>{
+//   console.log("tarun"); }
+// )()
+
+
+(function(){
+  console.log("tarun"); }
+)();
