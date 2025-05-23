@@ -113,3 +113,11 @@ function calculateSquare(num) {
 function calculateSquareRoot(num) {
   return Math.sqrt(num);
 }
+
+
+// ARROW function
+let addtwoNumber = (num1, num2) => {
+  return num1+num2
+}
+
+console.log(addtwoNumber(3,5));
