@@ -1,25 +1,25 @@
-// for loop 
-for (let i = 0; i < 10 ; i++) {
-    const element =  i ;
-    // console.log(element);  
+// for loop
+for (let i = 0; i < 10; i++) {
+  const element = i;
+  // console.log(element);
 }
 
 // break statement
 
 for (let i = 0; i < 10; i++) {
-    if (i==5) {
-        break;
-    }
-    // console.log(i);
+  if (i == 5) {
+    break;
+  }
+  // console.log(i);
 }
 
 //continue statrment
 for (let i = 0; i < 10; i++) {
-    if (i==5) {
-        // console.log(`skipped 5 from here`)
-        continue;
-    }
-    // console.log(i);
+  if (i == 5) {
+    // console.log(`skipped 5 from here`)
+    continue;
+  }
+  // console.log(i);
 }
 // for loop through an array
 // let arr=[1,2,3,4,5,6]
@@ -30,14 +30,13 @@ for (let i = 0; i < 10; i++) {
 
 // While loop syntax
 // while (condition) {
-    
+
 // }
 // while (i<10) {
-    //     console.log(i);
-    //     i++;    
-    // }
-    
-    
+//     console.log(i);
+//     i++;
+// }
+
 // array through a while loop
 // let arr1=[1,2,3,4,5,6]
 // let i = 0;
@@ -46,16 +45,12 @@ for (let i = 0; i < 10; i++) {
 //     i++;
 // }
 
-
-
 // do while loop
 // let i = 0;
 // do {
 //     console.log(i)
 //     i++
 // } while (i<10);
-
-
 
 // for of loop
 // let arr=[1,2,3,4,5,6,7,8]
@@ -69,7 +64,7 @@ for (let i = 0; i < 10; i++) {
 // map.set('last name', "Jangra")
 // map.set('github',"https://www.github.com/t4runjangra")
 // console.log(map);
-// get values like 
+// get values like
 //'first name'=> "Tarun"
 
 // for (const mapElements of map) { // got array after using it
@@ -80,7 +75,7 @@ for (let i = 0; i < 10; i++) {
 // }
 // forof loop can be used in the Map but not in object
 
-// object 
+// object
 
 // let myObj = {
 //     name:'tarun',
@@ -88,6 +83,25 @@ for (let i = 0; i < 10; i++) {
 //     number:'123456',
 //     js:'javascript'
 // }
-// for (const value in myObj) {    
+// for (const value in myObj) {
 //     console.log(`${value} values are:- ${myObj[value]}`);
+// }//for in loop provide keys instead of values
+
+//for each loop
+const myArr = ["tarun", "Aman", "Ram"];
+// myArr.forEach(function (items){
+//     console.log(items);
+// })
+
+// myArr.forEach((item)=>{
+//     console.log(item)
+// })
+
+// function print(item){
+//     console.log(item);
 // }
+// myArr.forEach(print)
+//
+// myArr.forEach((item,i,arr) => {
+//   console.log(item,i,arr);
+// });
