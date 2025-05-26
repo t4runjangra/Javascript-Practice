@@ -64,10 +64,10 @@ for (let i = 0; i < 10; i++) {
 // }
 
 //map
-let map = new Map()
-map.set('first name', "Tarun")
-map.set('last name', "Jangra")
-map.set('github',"https://www.github.com/t4runjangra")
+// let map = new Map()
+// map.set('first name', "Tarun")
+// map.set('last name', "Jangra")
+// map.set('github',"https://www.github.com/t4runjangra")
 // console.log(map);
 // get values like 
 //'first name'=> "Tarun"
@@ -75,7 +75,19 @@ map.set('github',"https://www.github.com/t4runjangra")
 // for (const mapElements of map) { // got array after using it
 //     console.log(mapElements)
 // }
-// for (const [keys, values] of map) { // can destruct the keys and values by using [] on the iterator
-//     console.log(`${keys} and there values ${values} and type of the element returend by desturcting ${typeof(keys)}`) // hence it give string as an output
+// for (const [values, values] of map) { // can destruct the values and values by using [] on the iterator
+//     console.log(`${values} and there values ${values} and type of the element returend by desturcting ${typeof(values)}`) // hence it give string as an output
 // }
 // forof loop can be used in the Map but not in object
+
+// object 
+
+// let myObj = {
+//     name:'tarun',
+//     lastname:'jangra',
+//     number:'123456',
+//     js:'javascript'
+// }
+// for (const value in myObj) {    
+//     console.log(`${value} values are:- ${myObj[value]}`);
+// }
