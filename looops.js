@@ -88,7 +88,7 @@ for (let i = 0; i < 10; i++) {
 // }//for in loop provide keys instead of values
 
 //for each loop
-const myArr = ["tarun", "Aman", "Ram"];
+// const myArr = ["tarun", "Aman", "Ram"];
 // myArr.forEach(function (items){
 //     console.log(items);
 // })
@@ -105,3 +105,43 @@ const myArr = ["tarun", "Aman", "Ram"];
 // myArr.forEach((item,i,arr) => {
 //   console.log(item,i,arr);
 // });
+
+
+
+// filter method
+// const myArr = [1,2,3,4,5,6,7,8,9] // took a array
+// let newArr = myArr.filter((item) => item>5) //add filter property on myArr and inside the filter it gives a call back function so i use arrow function in it , here item is a parameter 
+
+// let newArr = myArr.filter( (item) => {
+//   return item>5
+// }) // here i opened a scope after arrow function to return the logic inside we have to use the  return keyword 
+// console.log(newArr) 
+
+
+const books = [
+    { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
+    { title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008 },
+    { title: 'Book Three', genre: 'History', publish: 1999, edition: 2007 },
+    { title: 'Book Four', genre: 'Non-Fiction', publish: 1989, edition: 2010 },
+    { title: 'Book Five', genre: 'Science', publish: 2009, edition: 2014 },
+    { title: 'Book Six', genre: 'Fiction', publish: 1987, edition: 2010 },
+    { title: 'Book Seven', genre: 'History', publish: 1986, edition: 1996 },
+    { title: 'Book Eight', genre: 'Science', publish: 2011, edition: 2016 },
+    { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
+  ]; 
+
+// let myBooks = books.filter((book) => {
+//   return book.genre === 'History'
+// })
+
+// let myBooks = books.filter((book)=>book.publish >=2000 && book.edition >= 1980)
+// console.log(myBooks)
+
+// reduce method 
+
+// let nums = [1,2,3,4,5,6,7,8,9,10]
+// let i=0;
+// let newNums = nums.reduce((acc, curval)=>{ return acc+curval},0)
+// console.log(newNums)
+
+
