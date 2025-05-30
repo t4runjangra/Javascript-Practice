@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: #fff;
+        }
+        #navbar{
+            padding: 1em;
+            background-color: rgb(237, 242, 245);
+            width: 100px;
+            height: 300px;
+        }
+        li{
+            list-style: none;
+            padding: 10px 10px 10px 10px ;
+            text-align: center;
+            margin: auto ;
+        }
+        a{
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-size: x-large;
+        }
+        .trigger_sidebar{
+            background: none;
+            color: #fff;
+            border: none;
+            width: 40px;
+            height: 40px;
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="button">
+        <button class="trigger_sidebar">❄</button>
+    <div class="navbar">
+        <ul id="navbar">
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">me</a></li>
+        </ul>
+    </div>
+    </div>
+</body>
+<script>
+ const trigger = document.querySelector(".trigger_sidebar");
+    const ulNavbar = document.querySelector('#navbar');
+
+    let isVisible = false;
+    ulNavbar.style.display = 'none';
+    trigger.addEventListener('click', function() {
+        if (!isVisible) {
+            ulNavbar.style.display = 'block';
+            isVisible = true;
+        } else {
+            ulNavbar.style.display = 'none';           
+            isVisible = false;
+        }
+    });
+</script>
+</html>
