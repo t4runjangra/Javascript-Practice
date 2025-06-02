@@ -137,3 +137,13 @@ const result = (() => ({ name: "Tarun" }))();
 (function(){
   console.log("tarun"); }
 )();
+
+
+//async function in js with frtch 
+async function fetchData() {
+  const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+  const data = await response.json();
+  console.log(data);
+}
+
+fetchData();
