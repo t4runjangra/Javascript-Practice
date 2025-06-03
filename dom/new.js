@@ -5,12 +5,26 @@
 
 
 //currying
-function sumOfTwoNumber(a) {
-    return function (b) {
-        return function (c) {
-            return a+b+c
-        }
+// function sumOfTwoNumber(a) {
+//     return function (b) {
+//         return function (c) {
+//             return a+b+c
+//         }
+//     }
+// }
+// let sum = sumOfTwoNumber(1)(2)(3)
+// console.log(sum);
+
+
+function log(level) {
+    return function(mess){
+        console.log(`[${level}: ${mess}]`)
     }
 }
-let sum = sumOfTwoNumber(1)(2)(3)
-console.log(sum);
+
+const errorLog =  log("ERROR")
+const infoLog = log("INFO")
+
+// errorLog("Server Is Down")
+
+// infoLog("User logged in")
