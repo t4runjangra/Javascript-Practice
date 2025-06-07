@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <script>
+    // most of the reference is taken from the MDN and some of my knowledge :)
+      console.log("hello ");
+      const requestUrl = "https://api.github.com/users/hiteshchoudhary";
+      const xhr = new XMLHttpRequest(); //XMLHttpRequest (XHR) objects are used to interact with servers. You can retrieve data from a URL without having to do a full page refresh. This enables a Web page to update just part of a page without disrupting what the user is doing.
+      xhr.open("get", requestUrl);
+      xhr.onreadystatechange = function () {
+        console.log(xhr.readyState); // this is used for checking that the request are on ready state or not
+        if (xhr.readyState === 4) {
+          // here we used  === 4 because in the AJAX we have method that represent the working of the AJAX(Asynchronus JavaScript and XML: is a method which fetch content from server by making "async HTTP requests" and uses the new content to update the relevent parts without requiring a full page load  )
+          // these represent the method of XHR
+          //     0	UNSENT	Client has been created. open() not called yet.
+          //   1	OPENED	open() has been called.
+          //   2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+          //   3	LOADING	Downloading; responseText holds partial data.
+          //   4	DONE	The operation is complete.
+          const data = JSON.parse(this.responseText); // the data we get here is converted into string by using parse method on JSON( javaScripyt object notation)
+          // here this is used for the current context of the function that's why it get data from the api
+        //   console.log(typeof data);
+          console.log(data.followers);
+        }
+      };
+      xhr.send();//Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent.
+    </script>
+  </body>
 </html>
