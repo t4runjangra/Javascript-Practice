@@ -22,7 +22,7 @@
           //   2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
           //   3	LOADING	Downloading; responseText holds partial data.
           //   4	DONE	The operation is complete.
-          const data = JSON.parse(this.responseText); // the data we get here is converted into string by using parse method on JSON( javaScripyt object notation)
+          const data = JSON.parse(this.responseText); // the data we get here is converted into JSON by using parse method on JSON( javaScripyt object notation) cause when u fetch data from a url in general it come in the form of string
           // here this is used for the current context of the function that's why it get data from the api
         //   console.log(typeof data);
           console.log(data.followers);
