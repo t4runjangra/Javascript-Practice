@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #121212;
+            height: 100vh;
+        }
+        .bg {
+            width: 350px;
+            background-color: #1e1e1e;
+            color: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        }
+        .photo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .photo img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+        }
+        .nameOfUser {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .followerCount {
+            font-size: 1rem;
+            color: #bbbbbb;
+        }
+    </style>
+</head>
+<body id="html">
+</body>
+<script>
+    const divElement = document.createElement("div");
+    divElement.classList.add("bg");
+    html.appendChild(divElement);
+
+    const photo = document.createElement("div");
+    photo.classList.add("photo");
+    divElement.appendChild(photo);
+
+    const name = document.createElement("span");
+    name.classList.add("nameOfUser");
+    photo.appendChild(name);
+
+    const followers = document.createElement('span');
+    followers.classList.add("followerCount");
+    photo.appendChild(followers);
+
+    const url = 'https://api.github.com/users/hiteshchoudhary';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText);
+            const image = document.createElement('img');
+            image.src = data.avatar_url;
+            photo.appendChild(image);
+            name.innerText = data.name || "No Name";
+            followers.innerText = `${data.followers} Followers`;
+        }
+    };
+    xhr.send();
+</script>
+</html>
