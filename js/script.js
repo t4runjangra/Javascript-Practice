@@ -30,16 +30,64 @@
 // console.log(stu1.getData());
 
 
-class emp{
-    constructor(name,salary,empId){
-        this.name = name
-        this.salary = salary
-        this.empId= empId
-        // return ` ${this.name} ${this.salary} ${this.empId}`
-    }
-    getdata(){
-        return `name of the employee  ${this.name} salary ${this.salary} ${this.empId}`
-    }
-}
-let emp1 = new emp("Tarun",120000,12)
-console.log(emp1.getdata());
+// class emp{
+//     constructor(name,salary,empId){
+//         this.name = name
+//         this.salary = salary
+//         this.empId= empId
+//         // return ` ${this.name} ${this.salary} ${this.empId}`
+//     }
+//     getdata(){
+//         return `name of the employee  ${this.name} salary ${this.salary} ${this.empId}`
+//     }
+// }
+// let emp1 = new emp("Tarun",120000,12)
+// console.log(emp1.getdata());
+
+
+//polymorphism
+
+// class vehical {
+//     sound() {
+//         return `ratatata`
+//     }
+// }
+// class supra extends vehical{
+//     start(){
+//         return `supra do ${this.sound()}`
+//     }
+// }
+// let car = new vehical
+// console.log(car.sound());
+// let supraA = new supra
+// console.log(supraA.start());
+
+//static
+
+// class calculator{
+//     static sum(a,b){
+//         return a+b;
+//     }
+// }
+// console.log(calculator.sum(2+3,5));
+
+
+//getter and setter
+
+// class square{
+//     constructor(side){
+//         this._side = side
+//     }
+//     get side(){
+//         return this._side
+//     }
+//     set side(newSide){
+//         this._side = newSide
+//     }
+//     get area(){
+//         return `${this._side**2}`
+//     }
+// }
+// let sq = new square("2")
+// console.log(sq.area);
+
