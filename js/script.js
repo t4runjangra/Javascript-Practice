@@ -91,3 +91,30 @@
 // let sq = new square("2")
 // console.log(sq.area);
 
+
+
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+  }
+}
+
+class Student extends Person {
+  constructor(name, age, course) {
+    super(name, age);
+    this.course = course;
+  }
+
+  study() {
+    return `${this.name} is studying ${this.course}.`;
+  }
+}
+
+const student1 = new Student("Tarun", 19, "BCA");
+console.log(student1.greet());
+console.log(student1.study());
