@@ -118,3 +118,41 @@ class Student extends Person {
 const student1 = new Student("Tarun", 19, "BCA");
 console.log(student1.greet());
 console.log(student1.study());
+
+
+
+
+
+class student{
+    constructor(name , age, rollNumber){
+        this.name = name
+        this.age=age
+        this.roll= rollNumber
+    }
+    rollNo(){
+        return this.roll
+    }
+}
+class bcaStudent extends student{
+    constructor(name, age, rollNumber, studentphone, classRoll, studentId){
+        super(name,age,rollNumber);
+        this.studentphone = studentphone
+        this.classRoll= classRoll
+        this.studentId = studentId
+    }
+    studentDetails(){
+        return {
+            name : this.name ,
+            roll : this.roll , 
+            age : this.age ,
+            studentphone : this.studentphone ,
+            classRoll : this.classRoll ,
+            studentId : this.studentId
+            
+        }
+    }
+}
+let tarun = new student ("tarun", 19 , 1221)
+
+let aman = new bcaStudent("Aman",20,19,8708859187,1240298050,"4DX89") 
+console.log(aman.studentDetails())
