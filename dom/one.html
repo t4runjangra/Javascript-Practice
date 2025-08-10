@@ -19,28 +19,28 @@
     const button = document.getElementById("btn");
     divElement.style.display = "none";
     
-    // let isTrue = true
-    // function addPara(){
-      //     if (isTrue) {
-    //         divElement.style.display = 'block'
-    //         isTrue = false
-    //     }
-    //     else if (!isTrue) {
-      //         divElement.style.display = 'none'
-      //         isTrue = true
-      //     }
-      //     console.log("hello world")
-      // }
-      // button.addEventListener('click',addPara)
+    let isTrue = true
+    
+      button.addEventListener('click',function addPara(){
+          if (isTrue) {
+            divElement.style.display = 'block'
+            isTrue = false
+        }
+        else if (!isTrue) {
+              divElement.style.display = 'none'
+              isTrue = true
+          }
+          console.log("hello world")
+      })
       
-      // button.style.backgroundColor = "blue";
+      button.style.backgroundColor = "blue";
       
-      // button.addEventListener("mouseover", function () {
-        //   button.style.backgroundColor = "#123123";
-        // });
-        // button.addEventListener("mouseout", () => {
-          //   button.style.backgroundColor = "#FFF";
-          // });
+      button.addEventListener("mouseover", function () {
+          button.style.backgroundColor = "#123123";
+        });
+        button.addEventListener("mouseout", () => {
+            button.style.backgroundColor = "#1D2E4F";
+          });
           
           
           
